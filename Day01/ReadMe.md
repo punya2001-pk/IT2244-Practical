@@ -16,6 +16,11 @@ This script creates a hierarchical folder structure with multiple criteria and s
 1. Double-click `Pro1.bat` or run it in the Command Prompt.
 2. The specified folders will be created automatically.
 
+**Output**
+
+![Pro1](https://github.com/user-attachments/assets/3bab7983-888c-46ee-aa9f-24a98204bc92)
+
+
 ---
 
 ### 2. `Pro2.bat` - System Information Display
@@ -27,6 +32,11 @@ This script displays basic system information, including:
 1. Run `Pro2.bat` in the Command Prompt.
 2. The username and Windows version will be displayed.
 
+**Output**
+
+![Pro2](https://github.com/user-attachments/assets/8fd773a9-f2f6-4bd2-8bf1-3dccfb54a18b)
+
+
 ---
 
 ### 3. `Pro3.bat` - Date and Time Display
@@ -36,6 +46,11 @@ This script outputs the current system date and time.
 1. Run `Pro3.bat` in the Command Prompt.
 2. The date and time will be displayed.
 3. Press any key to exit.
+
+**Output**
+
+![Pro3](https://github.com/user-attachments/assets/f188f977-f2a8-4b13-9894-6a4e20644cf1)
+
 
 ---
 
@@ -48,5 +63,5 @@ This script outputs the current system date and time.
 ---
 
 **Author:** punya2001-pk  
-**Repository:** 
+
 
