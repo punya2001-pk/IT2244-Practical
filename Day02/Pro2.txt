@@ -1,0 +1,12 @@
+// enter the birthyear and get the age
+// turn off command echoing to prevent  displaying command
+// set /p :- get user input
+// set /a :- to do arithmetic operations
+// %age% :- get the stored value in varible age
+// pause :- prevent the window closing immediately
+
+@echo off 
+set/p birthyear=Enter your birthyear:
+set/a age=%date:~ 10,4% -%birthyear%
+echo age:%age% yearold
+pause

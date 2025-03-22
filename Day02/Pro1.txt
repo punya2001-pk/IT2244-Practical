@@ -1,0 +1,59 @@
+// using 'touch' command create an empty file 
+touch abc.txt
+touch xyz.csv
+
+// using 'vi' command open the new empty file and text editor on a linux system
+// enter the data and press ctrl+c(save) -> shift+: -> wq!
+vi abc.txt
+vi xyz.csv
+
+// using 'more' command file content will be shown one page at a time
+more abc.txt
+more xyz.csv
+
+// using 'less' command display the content and allowing you to scroll both forward and backword
+less abc.txt
+less xyz.csv
+
+// using 'ls-ltr' command list the files and directories with details
+// l - it used to long format(owner,size,modification time)
+// t - it used to sorts by modification time
+// r - it used to reverse the sorting order(oldest files first)
+ls-ltr | grep "file_name"
+
+// using 'ls-a' command list all files and directories including hidden files
+// l - Lists files in the current directory
+// a - Shows all files, including hidden files
+ls-a | grep "file_name"
+
+// using 'chmod 757' specific permissions on a file or directory
+// 7 - owner - read(4) + write(2) + execute(1) = rwx(full access)
+// 5 - group - read(4) + execute(1) = r-x(no write permission)
+// 7 - others - read(4) + write(2) + execute(1) = rwx(full access)
+chmod 757 abc.txt
+
+// using this command we can search all .txt files in the current directory and its subdirectories
+find . -name "*.txt"
+
+// 'wc' - word count command used to count the number of lines in the file
+// '-l' - number of lines
+wc -l xyz.csv
+
+// 'cut' - used to extract specific columns from a file
+// Extracts columns 1 and 3 from xyz.csv , Uses tab (\t) as the default delimiter (since -d is not specified)
+cut -f 1,3 xyz.csv
+
+// Extracts columns 1 and 3 from xyz.csv ,  Specifies comma (,) as the delimiter (used for CSV files).
+cut -d ',' -f 1,3 xyz.csv
+
+// Extracts columns 1 and 3 from xyz.csv , display the output to a new file xyz1.csv
+cut -d ',' -f 1,3 xyz.csv > xyz1.csv
+
+
+// Displays the first 3 lines of the file xyz.csv
+head -3 xyz.csv
+
+// Displays the last 2 lines of the file xyz.csv
+tail -2 xyz.csv
+
+
