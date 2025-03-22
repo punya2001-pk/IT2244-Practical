@@ -1,0 +1,7 @@
+// username - used for a display the current user, 'username' 
+// windows version - used for a display the widows version  
+
+@echo off
+echo Username: %username% 
+ver
+pause

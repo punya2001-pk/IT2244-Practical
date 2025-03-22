@@ -1,0 +1,13 @@
+// date - used for a display the current date
+// time - used for a display the current time
+// color - change the color in the text (ex:color2- green,color-7 white)
+
+@echo off
+date
+
+time
+
+color 2 
+color 7 
+
+pause
