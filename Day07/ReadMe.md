@@ -1,52 +1,163 @@
-# Batch Scripts Collection
+Q1. write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number.(use switch case)
 
-This repository contains three batch script files designed for different purposes, including directory creation, system information display, and time/date retrieval.
+example:
 
-## Included Batch Files
+calculation for life path number:
 
-### 1. `Pro1.bat` - Directory Structure Creator
-This script creates a hierarchical folder structure with multiple criteria and standard folders.
+	a=date%10
+ 
+	b=date/10
+ 
+	c=a+b
+	
+if life path number:
 
-**Functionality:**
-- Creates six main folders (`Critieria_1` to `Critieria_6`).
-- Each main folder contains subdirectories named `Standar_1`, `Standar_2`, etc.
-- Helps organize files systematically.
+	1:Lucky
+ 
+	2:Carefuly do your work
+ 
+	3:Strange
+ 
+	4:Happy
+ 
+	5:Can get help
+ 
+	6:Doubt
+ 
+	7:sad
+ 
+	8:Like
+ 
+	9:Courage
+	
+CODE:	
 
-**Usage:**
-1. Double-click `Pro1.bat` or run it in the Command Prompt.
-2. The specified folders will be created automatically.
+echo "Enter the birth date: "
 
----
+read date
 
-### 2. `Pro2.bat` - System Information Display
-This script displays basic system information, including:
-- The currently logged-in username.
-- The Windows version.
+a=$(($date%10))
 
-**Usage:**
-1. Run `Pro2.bat` in the Command Prompt.
-2. The username and Windows version will be displayed.
+b=$(($date/10))
 
----
+c=$(($a+$b))
 
-### 3. `Pro3.bat` - Date and Time Display
-This script outputs the current system date and time.
+case $c in
 
-**Usage:**
-1. Run `Pro3.bat` in the Command Prompt.
-2. The date and time will be displayed.
-3. Press any key to exit.
+        1)echo "Lucky";;
+        
+        2)echo "Carefuly do your work";;
+        
+        3)echo "Strange";;
+        
+        4)echo "Happy";;
+        
+        5)echo "Can get help";;
+        
+        6)echo "Doubt";;
+        
+        7)echo "sad";;
+        
+        8)echo "Like";;
+        
+        9)echo "Courage";;
+esac
 
----
+![1](https://github.com/user-attachments/assets/fefda58f-9e67-4cef-bfa9-5f2d4c9e577c)
 
-## How to Use
-1. Download the batch files.
-2. Place them in the desired directory.
-3. Double-click or run them via Command Prompt (`cmd`).
-4. Follow on-screen prompts if applicable.
+![Screenshot 2025-04-11 150131](https://github.com/user-attachments/assets/98a47796-4c45-49e4-b3e1-cb9a5cd4444e)
 
----
 
-**Author:** punya2001-pk  
-**Repository:** 
+.............................................................................................................................
 
+Q2. Give list of numbers then calculate the summation and multiplication using for loop.
+Example:
+1	2	3	4	5
+summation :15
+multiplication :120
+
+*********************************
+syntax for For loop:            *
+   for variable in list         * 
+		do                  	      * 
+		  commands          	      *
+	done                          *
+*********************************								
+syntax for while loop:	        *
+	while[condition]		        	*
+		do			  			            *
+		 commands		  		          *
+	done				  		            *
+								                *
+*********************************
+
+CODE:
+sum=0
+mul=1
+for num in 1 2 3 4 5
+do
+sum=$(($sum+$num))
+mul=$(($mul*$num))
+done
+echo "Summation:$sum"
+echo "Multiplication:$mul"
+
+
+![2](https://github.com/user-attachments/assets/c7204ac8-3b92-4274-b71f-a90ab85b5288)
+
+
+.............................................................................................................................
+
+Q3. Print the integers from 1 to 10 using while loop
+
+CODE:
+let 
+while [ $i -le 10 ]
+do
+echo $i
+i=$(($i+1))
+done
+
+![3](https://github.com/user-attachments/assets/37953607-764a-4266-ad4b-8fba25409600)
+
+
+.............................................................................................................................
+
+Q4. Print below pattern using nested loop
+column 7 row 7
+
+<img width="310" alt="q" src="https://github.com/user-attachments/assets/f9795db9-1ab5-47a7-8a5d-946694ef1840" />
+
+
+CODE:
+
+echo 'Enter number of Rows: '
+read rows
+echo 'Enter number of Columns: '
+read cols
+
+for ((i=1; i<=rows; i++))
+do
+for ((j=1; j<=i; j++))
+do
+echo -n '* '
+done
+echo ''
+done
+
+echo " "
+
+for ((i=1; i<=rows; i++))
+do
+for ((j=cols+1; j>i; j--))
+do
+echo -n '* '
+done
+echo ''
+done
+
+
+![5](https://github.com/user-attachments/assets/37444884-0ed7-40b7-89fe-758199590e2b)
+
+
+.........................................................................................................................
