@@ -1,52 +1,85 @@
-# Batch Scripts Collection
 
-This repository contains three batch script files designed for different purposes, including directory creation, system information display, and time/date retrieval.
+## Q1) Fibbonacci series: (Output: First 10 fibbonacci numbers: 0 1 1 2 3 5 8  13 21 34)
 
-## Included Batch Files
+CODE:
 
-### 1. `Pro1.bat` - Directory Structure Creator
-This script creates a hierarchical folder structure with multiple criteria and standard folders.
+echo ""
 
-**Functionality:**
-- Creates six main folders (`Critieria_1` to `Critieria_6`).
-- Each main folder contains subdirectories named `Standar_1`, `Standar_2`, etc.
-- Helps organize files systematically.
+echo "....Fibonacci...."
 
-**Usage:**
-1. Double-click `Pro1.bat` or run it in the Command Prompt.
-2. The specified folders will be created automatically.
+base1=0
 
----
+base2=1
 
-### 2. `Pro2.bat` - System Information Display
-This script displays basic system information, including:
-- The currently logged-in username.
-- The Windows version.
+echo -n "$base1 $base2 "
 
-**Usage:**
-1. Run `Pro2.bat` in the Command Prompt.
-2. The username and Windows version will be displayed.
+for((a=2; a<=10; a++))
 
----
+do
 
-### 3. `Pro3.bat` - Date and Time Display
-This script outputs the current system date and time.
+Fibo=$(($base1+$base2))
 
-**Usage:**
-1. Run `Pro3.bat` in the Command Prompt.
-2. The date and time will be displayed.
-3. Press any key to exit.
+echo -n "$Fibo "
 
----
+base1=$base2
 
-## How to Use
-1. Download the batch files.
-2. Place them in the desired directory.
-3. Double-click or run them via Command Prompt (`cmd`).
-4. Follow on-screen prompts if applicable.
+base2=$Fibo
 
----
+done
 
-**Author:** punya2001-pk  
-**Repository:** 
+![2](https://github.com/user-attachments/assets/bf09dd91-9bea-4519-b8f2-d5736d9c9752)
+
+
+## Q2) Factorial(Output: Factorial of 5 is: 120)
+
+CODE:
+
+echo "Enter the number: "
+
+read number
+
+fact=1
+
+for((i=1;i<=number;i++))
+
+do
+
+fact=$(($fact*$i))
+
+done
+
+echo "Factorial of number:$fact"
+
+![1](https://github.com/user-attachments/assets/cec802a1-067c-4264-a52f-3cb5d089d70a)
+
+
+## Q3) Multiples of 3 between 1 and 50
+
+CODE:
+
+echo ""
+
+echo "....Multiples of 3...."
+
+number=3
+
+for(( a=1; a<=16; a++))
+
+do
+
+mul=$(($number*$a))
+
+echo -n "$mul "
+
+done
+
+for((a=3; a<50; a+=3))
+
+do
+
+echo -n "$a"
+
+done
+
+![3](https://github.com/user-attachments/assets/5ae030dd-ecb6-4204-8edc-d1e2ab662c68)
 
