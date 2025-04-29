@@ -1,0 +1,86 @@
+
+login as: 2021ict123
+2021ict123@172.16.140.150's password:
+Last login: Mon Mar 24 11:35:06 2025 from 172.16.140.72
+[2021ict123@fedora ~]$ ls -ltr
+total 8
+-rw-r--r--. 1 2021ict123 2021ict123  0 Mar 17 11:40 abc.txt
+-rw-r--r--. 1 2021ict123 2021ict123 36 Mar 21 15:01 abc.csv
+-rw-r--r--. 1 2021ict123 2021ict123 45 Mar 21 15:16 xyz.csv
+
+[2021ict123@fedora ~]$ cal
+     March 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+
+[2021ict123@fedora ~]$ date +%d
+24
+[2021ict123@fedora ~]$ date +%y
+25
+[2021ict123@fedora ~]$ date +%Y
+2025
+[2021ict123@fedora ~]$ date +%A
+Monday
+[2021ict123@fedora ~]$ date +%D
+03/24/25
+[2021ict123@fedora ~]$ date +%a
+Mon
+[2021ict123@fedora ~]$ date +%m
+03
+[2021ict123@fedora ~]$ date +%M
+50
+[2021ict123@fedora ~]$ date +%t
+
+[2021ict123@fedora ~]$ date +%T
+11:51:00
+[2021ict123@fedora ~]$ date +%H
+11
+[2021ict123@fedora ~]$ date +%h
+Mar
+
+[2021ict123@fedora ~]$ touch prgrm.sh
+[2021ict123@fedora ~]$ vi prgrm.sh
+
+echo "Name"
+read name
+echo "number1"
+read num1
+echo "number2"
+read num2
+sum=$(($num1+$num2))
+sub=$(($num1-$num2))
+mul=$(($num1*$num2))
+div=$(($num1/$num2))
+echo "Summation" $sum
+echo "Substraction" $sub
+echo "Multiplication" $mul
+echo "Division" $div
+
+
+[2021ict123@fedora ~]$ ls
+
+abc.csv  abc.txt  prgrm.sh  xyz.csv
+[2021ict123@fedora ~]$ chmod 777 prgrm.sh
+[2021ict123@fedora ~]$ ls
+abc.csv  abc.txt  prgrm.sh  xyz.csv
+
+[2021ict123@fedora ~]$ ./prgrm.sh
+Name
+punya
+number1
+20
+number2
+5
+Summation 25
+Substraction 15
+Multiplication 100
+Division 4
+
+
+
