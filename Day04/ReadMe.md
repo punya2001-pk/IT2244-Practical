@@ -1,52 +1,72 @@
-# Batch Scripts Collection
+login as: 2021ict123
 
-This repository contains three batch script files designed for different purposes, including directory creation, system information display, and time/date retrieval.
+2021ict123@172.16.140.150's password:
 
-## Included Batch Files
+Last login: Mon Mar 24 11:35:06 2025 from 172.16.140.72
 
-### 1. `Pro1.bat` - Directory Structure Creator
-This script creates a hierarchical folder structure with multiple criteria and standard folders.
+[2021ict123@fedora ~]$ ls -ltr
 
-**Functionality:**
-- Creates six main folders (`Critieria_1` to `Critieria_6`).
-- Each main folder contains subdirectories named `Standar_1`, `Standar_2`, etc.
-- Helps organize files systematically.
 
-**Usage:**
-1. Double-click `Pro1.bat` or run it in the Command Prompt.
-2. The specified folders will be created automatically.
+![1](https://github.com/user-attachments/assets/0f52e9f2-c7fc-4cfc-8d6a-9242715874b7)
 
----
 
-### 2. `Pro2.bat` - System Information Display
-This script displays basic system information, including:
-- The currently logged-in username.
-- The Windows version.
+[2021ict123@fedora ~]$ cal
 
-**Usage:**
-1. Run `Pro2.bat` in the Command Prompt.
-2. The username and Windows version will be displayed.
+[2021ict123@fedora ~]$ date +%d
 
----
+[2021ict123@fedora ~]$ date +%y
 
-### 3. `Pro3.bat` - Date and Time Display
-This script outputs the current system date and time.
+[2021ict123@fedora ~]$ date +%Y
 
-**Usage:**
-1. Run `Pro3.bat` in the Command Prompt.
-2. The date and time will be displayed.
-3. Press any key to exit.
+[2021ict123@fedora ~]$ date +%A
 
----
+[2021ict123@fedora ~]$ date +%D
 
-## How to Use
-1. Download the batch files.
-2. Place them in the desired directory.
-3. Double-click or run them via Command Prompt (`cmd`).
-4. Follow on-screen prompts if applicable.
+[2021ict123@fedora ~]$ date +%a
 
----
+[2021ict123@fedora ~]$ date +%m
 
-**Author:** punya2001-pk  
-**Repository:** 
+[2021ict123@fedora ~]$ date +%M
+
+[2021ict123@fedora ~]$ date +%t
+
+[2021ict123@fedora ~]$ date +%T
+
+[2021ict123@fedora ~]$ date +%H
+
+[2021ict123@fedora ~]$ date +%h
+
+
+![2](https://github.com/user-attachments/assets/c912b465-13ab-4063-9775-60eb7b82fbe7)
+
+
+[2021ict123@fedora ~]$ touch prgrm.sh
+[2021ict123@fedora ~]$ vi prgrm.sh
+
+echo "Name"
+read name
+echo "number1"
+read num1
+echo "number2"
+read num2
+sum=$(($num1+$num2))
+sub=$(($num1-$num2))
+mul=$(($num1*$num2))
+div=$(($num1/$num2))
+echo "Summation" $sum
+echo "Substraction" $sub
+echo "Multiplication" $mul
+echo "Division" $div
+
+
+[2021ict123@fedora ~]$ ls
+
+[2021ict123@fedora ~]$ chmod 777 prgrm.sh
+[2021ict123@fedora ~]$ ls
+
+[2021ict123@fedora ~]$ ./prgrm.sh
+
+![3](https://github.com/user-attachments/assets/ce91d2a2-1852-48fa-8bfa-2a8b302914ad)
+
+
 
