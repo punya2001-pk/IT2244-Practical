@@ -1,0 +1,272 @@
+// C language... extention- .c
+
+01.....
+
+touch pro1.c // create new file
+
+vi pro1.c // open the new file
+
+// Display the Hello world!
+
+#include<stdio.h>
+int main(){
+	printf("Hello world!");
+return 0;
+}
+
+gcc pro1.c -o pro1 // get the permission
+
+./pro1 // run the programm
+
+02.....
+
+// ..... Variables ......
+
+touch pro2.c 
+
+vi pro2.c 
+
+// Display the age(Integer value)
+
+#include<stdio.h>
+int main(){
+	int age=23;
+	printf("%d",age);
+	return 0;
+}
+
+gcc pro2.c -o pro1 
+
+./pro2 
+
+
+%d / %i - integers
+%f / %F - float
+%lf - double
+%c - char
+$s - string
+
+
+03.....
+
+// assign new value for same variable
+
+#include<stdio.h>
+int main(){
+	int age=25;
+printf("%d",age);
+
+printf("C Progrmming");
+
+age=31;
+printf("\nNew age:%d",age);
+return 0;
+}
+
+gcc pro3.c -o pro3
+./pro3
+
+
+04.....
+
+#include<stdio.h>
+int main(){
+	int firstNumber=25;
+printf("first number%d",firstNumber);
+
+int secondNumber=firstNumber;
+printf("second number:%d",secondNumber);
+return 0;
+}
+
+
+gcc pro4.c -o pro4
+./pro4
+
+
+05.....
+
+// Declare multiple variables in single line
+
+#include<stdio.h>
+int main(){
+	int firstNumber,secondNumber=25;
+printf("first number%d",firstNumber);
+printf("second number%d",secondNumber);
+return 0;
+}
+
+gcc pro5.c -o pro5
+./pro5
+
+
+06.....
+
+// Variable naming convention
+
+//can't create variable names with space
+
+//can't start variable names with numbers
+
+
+07.....
+
+// data types
+
+#include<stdio.h>
+int main(){
+	int age=25;
+printf("%d",age);
+printf("size: %zu", sizeof(age));
+return 0;
+}
+
+gcc pro6.c -o pro6
+./pro6
+
+
+
+08.....
+
+// Double numbers
+
+#include<stdio.h>
+int main(){
+	double number=12.45;
+	printf("%lf",number); // 12.450000
+	// printf("%.2lf",number); // 12.450000
+return 0;
+}
+
+gcc pro8.c -o pro8
+./pro8
+
+
+09.....
+
+// Floating numbers
+
+#include<stdio.h>
+int main(){
+	float number=10.9f;
+	printf("%f",number); // 10.900000
+	// printf(".1%f",number); // 10.9
+return 0;
+}
+
+gcc pro9.c -o pro9
+./pro9
+
+
+10.....
+
+// Characters
+
+#include<stdio.h>
+int main(){
+	char gender='m';
+	printf("gender: %c",gender); 
+	printf("\n%d",gender);
+return 0;
+}
+
+gcc pro10.c -o pro10
+./pro10
+
+
+11.....
+
+// Take integer input from users
+
+#include<stdio.h>
+int main(){
+	int age;
+	printf("Enter your age:"); 
+	printf("%d",age);
+	scanf("\n%d", &age);
+	
+	printf("\nAge=%d",age);
+return 0;
+}
+
+gcc pro11.c -o pro11
+./pro11
+
+
+12.....
+
+//Take double and char input from users
+
+#include<stdio.h>
+int main(){
+	double num1;
+	char alpha;
+	printf("Enter your num1:"); 
+	scanf("%lf", &num1);
+	printf("\nNum1=%lf",num1);
+	
+	
+	printf("Enter your Char:"); 
+	scanf("%c", &alpha);
+	printf("\nAlpha=%c",alpha);
+return 0;
+}
+
+gcc pro12.c -o pro12
+./pro12
+
+13.....
+
+// Take multiple inputs together
+
+#include<stdio.h>
+int main(){
+	double num1;
+	char alpha;
+	printf("Enter your inputs:"); 
+	scanf("%lf %c", &num1,&alpha);
+	printf("%lf",num1);
+	printf("\n%c",alpha);
+return 0;
+}
+
+gcc pro13.c -o pro13
+./pro13
+
+
+14.....
+
+// Comments
+
+// - Single live comments  ctrl+/
+
+/* */ - multiple comments  ctrl+shift+/
+
+
+15.....
+
+// Arithmetic operators
+
++
+-
+*
+/
+%  // reminder
+
+#include<stdio.h>
+int main(){
+	int num1;
+	int num2;
+	printf("Enter your numbers:"); 
+	scanf("%d %d", &num1,&num2);
+	
+	printf("Summation: %d",num1+num2);
+	printf("\nSubstraction: %d",num1-num2);
+	printf("\nMultiplication: %d",num1*num2);
+	printf("\nDivision: %lf",num1/num2);
+	printf("\nModule: %d",num1%num2);
+return 0;
+}
+
+gcc pro15.c -o pro15
+./pro15
