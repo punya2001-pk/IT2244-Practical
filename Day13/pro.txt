@@ -1,0 +1,482 @@
+***** if statement ***** 
+
+if(condition){
+	//body of if statements;
+}
+else{
+	//body of else statements;
+}
+
+//Enter your age and verify your aligible or not for election voting //1
+
+vi ifelse.c
+
+#include<stdio.h>
+int main(){
+	int age;
+	printf("Enter your age:"); 
+	scanf("%d", &age);
+
+	if(age>=18){
+		printf("You are elegible.\n");
+	}
+	else if(age<0){
+		printf("Invalid age.\n");
+		}
+	else{
+		printf("You are not elegible.\n");
+	}
+return 0;	
+}
+
+gcc ifelse.c -o ifelse
+./ifelse
+
+
+***** Ternary operator *****
+
+// Test_condition ? expression1 : expression2; //2
+
+vi ternary.c
+
+#include<stdio.h>
+int main(){
+	int age;
+	printf("Enter your age:"); 
+	scanf("%d", &age);
+
+	(age>=18) ? printf("You are elegible.\n"): printf("You are not elegible.\n");
+return 0;	
+}
+
+gcc ternary.c -o ternary
+./ternary
+
+
+***** Switch operator *****
+
+switch(variable/expression){
+	case 1:
+		// body of case 1
+		break;
+	case 2:
+		// body of case 2
+		break;
+	case n:
+		// body of case n
+		break;
+	default:
+		// body of default
+}
+
+// Enter the value between 1 to 7 ... enter one display the today is sunday //3
+
+vi switch.c
+
+#include<stdio.h>
+int main(){
+	int number;
+	printf("Enter your number:"); 
+	scanf("%d", &number);
+
+	switch(number){
+	case 1:
+		printf("Today is Sunday!\n");
+		break;
+	case 2:
+		printf("Today is Monday!\n");
+		break;
+	case 3:
+		printf("Today is Tuesday!\n");
+		break;
+	case 4:
+		printf("Today is Wednesday!\n");
+		break;
+	case 5:
+		printf("Today is Thursday!\n");
+		break;
+	case 6:
+		printf("Today is Friday!\n");
+		break;
+	case 7:
+		printf("Today is Saterday!\n");
+		break;
+	default:
+		printf("Invalid number!\n");
+}
+
+return 0;	
+}
+
+gcc switch.c -o switch
+./switch
+
+//  write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number.(use switch case) //4
+
+example:
+calculation for life path number:
+	a=date%10
+	b=date/10
+	c=a+b
+	
+if life path number:
+	1:Lucky
+	2:Carefuly do your work
+	3:Strange
+	4:Happy
+	5:Can get help
+	6:Doubt
+	7:sad
+	8:Like
+	9:Courage
+	
+	
+vi lifepath.c
+
+#include<stdio.h>
+int main(){
+	int date;
+	int a;
+	int b;
+	int c;
+	int d;
+	int e;
+	int f;
+	printf("Enter your birth date:"); 
+	scanf("%d", &date);
+	
+	a=date%10;
+	b=date/10;
+	c=a+b;
+	d=c%10;
+	e=c/10;
+	f=d+e;
+
+	switch(c){
+	case 1:
+		printf("Lucky\n");
+		break;
+	case 2:
+		printf("Carefuly do your work\n");
+		break;
+	case 3:
+		printf("Strange\n");
+		break;
+	case 4:
+		printf("Happy\n");
+		break;
+	case 5:
+		printf("Can get help\n");
+		break;
+	case 6:
+		printf("Doubt\n");
+		break;
+	case 7:
+		printf("sad\n");
+		break;
+	case 8:
+		printf("Like\n");
+		break;
+	case 9:
+		printf("Courage\n");
+		break;
+	default:
+		switch(f){
+	case 1:
+		printf("Lucky\n");
+		break;
+	case 2:
+		printf("Carefuly do your work\n");
+		break;
+	case 3:
+		printf("Strange\n");
+		break;
+	case 4:
+		printf("Happy\n");
+		break;
+	case 5:
+		printf("Can get help\n");
+		break;
+	case 6:
+		printf("Doubt\n");
+		break;
+	case 7:
+		printf("sad\n");
+		break;
+	case 8:
+		printf("Like\n");
+		break;
+	case 9:
+		printf("Courage\n");
+		break;
+	default:
+		
+		printf("Invalid\n");
+		}
+}
+
+return 0;	
+}
+
+gcc lifepath.c -o lifepath
+./lifepath
+
+
+// Give list of numbers then calculate the summation and multiplication using for loop.
+
+// example: 1 2 3 4 5   summation = 15     multiplication = 120
+
+vi for.c
+
+#include<stdio.h>
+int main(){
+	int summation;
+	int multiplication;
+	
+	for(int i=1; i<=5; i++)
+	{
+		summation = summation + i;
+	multiplication = multiplication * i;
+	}
+	
+	printf("\nSummation = %d",summation);
+	printf("\nMultiplication = %d",multiplication);
+	
+return 0;	
+}
+
+gcc for.c -o for
+./for
+
+
+// Print the integers from 1 to 10 using while loop. //6
+
+vi while.c
+
+#include<stdio.h>
+int main(){
+	int i=1;
+	while(i<=10){
+		printf("%d\n",i);
+		i = i+1;
+	}
+	
+return 0;	
+}
+
+gcc while.c -o while
+./while
+
+
+// Write a program to generate and print the fibanocci series up to a specified number of terms. The program should take the number of terms as input from the user and then display the corresponding fibanocci sequence. //
+
+vi fibanocci.c
+
+#include<stdio.h>
+int main(){
+	int num;
+	int a = 0;
+	int b = 1;
+	int c;
+	printf("Enter the number(non-negative):"); 
+	scanf("%d", &num);
+	
+	for(int i=0; i<num; i++)
+	{
+		printf("%d",a);
+		printf(" ");
+		c=a+b;
+		a=b;
+		b=c;
+	}
+	
+return 0;	
+}
+
+gcc fibanocci.c -o fibanocci
+./fibanocci
+
+
+// Write a program to calculate the factorial of a given non-negative integer.
+
+vi factorial.c
+
+#include<stdio.h>
+int main(){
+	int num;
+	int fact = 1;
+	printf("Enter the number(non-negative):"); 
+	scanf("%d", &num);
+	
+	for(int i=1; i<=num; i++)
+	{
+		fact = fact * i;
+	}
+	printf("Factorial = %d\n",fact);
+	
+return 0;	
+}
+
+gcc factorial.c -o factorial
+./factorial
+
+
+// Write a C program that:
+Accepts two strings as input from the user.
+Concatenates the two strings Displays the concatenated result.
+
+vi concatenates.c
+
+#include <stdio.h>
+	#include <string.h>
+
+	int main() {
+    char str1[100], str2[100];
+
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+
+    strcat(str1, str2);
+
+    printf("Concatenated result: %s\n", str1);
+
+    return 0;
+	}
+
+
+gcc concatenates.c -o concatenates
+./concatenates
+
+
+// Write a C program that takes a binary number (as an integer) as input and 
+converts it to its decimal equivalent.
+
+vi convert.c
+
+#include <stdio.h>
+	#include <math.h>
+
+	int main() {
+    	long long binary;
+    	int decimal = 0, base = 1, remainder;
+
+    	printf("Enter a binary number : ");
+    	scanf("%lld", &binary);
+
+    	while (binary != 0) {
+        	remainder = binary % 10;
+        	if (remainder != 0 && remainder != 1) {
+            	printf("Invalid binary number.\n");
+            	return 1;
+        }
+        decimal += remainder * base;
+        binary /= 10;
+        base *= 2;
+   	}
+
+    	printf("Decimal equivalent: %d\n", decimal);
+
+    	return 0;
+	}
+
+gcc convert.c -o convert
+./convert
+
+
+// Write a C program that:
+Accepts an array of integers from the user.
+Finds and displays the maximum and minimum values in the array.
+
+vi array.c
+
+#include <stdio.h>
+
+	int main() {
+		int n, i;
+		int arr[100];
+		int max, min;
+
+		printf("Enter the number of elements in the array: ");
+		scanf("%d", &n);
+
+		if (n <= 0 || n > 100) {
+			printf("Invalid number of elements.\n");
+			return 1;
+		}
+
+		printf("Enter %d integers:\n", n);
+		for (i = 0; i < n; i++) {
+			scanf("%d", &arr[i]);
+		}
+
+		max = min = arr[0];
+
+		for (i = 1; i < n; i++) {
+			if (arr[i] > max)
+				max = arr[i];
+			if (arr[i] < min)
+				min = arr[i];
+		}
+
+		printf("Maximum value: %d\n", max);
+		printf("Minimum value: %d\n", min);
+
+		return 0;
+	}
+
+gcc array.c -o array
+./array
+
+
+// C program to generate Pascal's Triangle.
+
+Output:
+no of rows =5
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+ 
+vi pascal.c
+ 
+#include <stdio.h>
+
+	int factorial(int n) {
+		if (n == 0 || n == 1)
+			return 1;
+		return n * factorial(n - 1);
+	}
+
+
+	int combination(int n, int r) {
+		return factorial(n) / (factorial(r) * factorial(n - r));
+	}
+
+	int main() {
+		int rows, i, j, space;
+
+		printf("Enter the number of rows: ");
+		scanf("%d", &rows);
+
+		for (i = 0; i < rows; i++) {
+			
+			for (space = 0; space < rows - i - 1; space++) {
+				printf("  ");
+			}
+
+			for (j = 0; j <= i; j++) {
+				printf("%4d", combination(i, j)); 
+			}
+
+			printf("\n");
+		}
+
+		return 0;
+	}
+
+gcc pascal.c -o pasccal
+./pascal
