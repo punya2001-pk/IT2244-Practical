@@ -7,7 +7,7 @@ else{
 	//body of else statements;
 }
 
-//Enter your age and verify your aligible or not for election voting //1
+//Enter your age and verify your aligible or not for election voting 
 
 vi ifelse.c
 
@@ -35,7 +35,7 @@ gcc ifelse.c -o ifelse
 
 ***** Ternary operator *****
 
-// Test_condition ? expression1 : expression2; //2
+// Test_condition ? expression1 : expression2; 
 
 vi ternary.c
 
@@ -69,7 +69,7 @@ switch(variable/expression){
 		// body of default
 }
 
-// Enter the value between 1 to 7 ... enter one display the today is sunday //3
+// Enter the value between 1 to 7 ... enter one display the today is sunday 
 
 vi switch.c
 
@@ -111,7 +111,7 @@ return 0;
 gcc switch.c -o switch
 ./switch
 
-//  write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number.(use switch case) //4
+//  write a code for small astrology based on your life path number for that get date of birth from user then calculate life path number.(use switch case) 
 
 example:
 calculation for life path number:
@@ -249,7 +249,7 @@ gcc for.c -o for
 ./for
 
 
-// Print the integers from 1 to 10 using while loop. //6
+// Print the integers from 1 to 10 using while loop. 
 
 vi while.c
 
@@ -268,7 +268,7 @@ gcc while.c -o while
 ./while
 
 
-// Write a program to generate and print the fibanocci series up to a specified number of terms. The program should take the number of terms as input from the user and then display the corresponding fibanocci sequence. //
+// Write a program to generate and print the fibanocci series up to a specified number of terms. The program should take the number of terms as input from the user and then display the corresponding fibanocci sequence. 
 
 vi fibanocci.c
 
