@@ -1,5 +1,3 @@
-.................................................................................
- 
 01.
 
 vi sleep.c
@@ -26,8 +24,6 @@ gcc sleep.c -o sleep
 
 ./sleep
 
-
-................................................................................
 
 02.
 
@@ -88,8 +84,6 @@ gcc wait.c -o wait
 ./wait
 
 
-................................................................................
-
 03. First child: Slept for 1 second.
 	Second child: Slept for 3 second.
 	Parent: Both children have finished.
@@ -142,7 +136,6 @@ gcc exc.c -o exc
 
 ./exc
 
-................................................................................
 
 04. First child: Slept for 2 seconds, exits with status 2
 	Second child: Slept for 1 second, exits with status 1
@@ -210,7 +203,6 @@ gcc exc2.c -o exc2
 ./exc2
 
 
-................................................................................
 
 05. The parent creates a child process.
 	The child creates a grandchild process.
