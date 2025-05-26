@@ -1,5 +1,5 @@
 # IT2244_Practicals
-Operating Systems - Practicals
+## Operating Systems - Practicals
 
 Quiz 01 :-
 
@@ -7,5 +7,6 @@ Question: Get the user input for three numbers (a,b,c).Calculate the LCM(Least C
 
 
 
-![SS1](https://github.com/user-attachments/assets/2fc7c3a7-e05e-4da4-94c2-aae32e3fd91f)
+![1](https://github.com/user-attachments/assets/3f32d7cb-3476-4a68-8a7a-e6c822e3482a)
+
 
