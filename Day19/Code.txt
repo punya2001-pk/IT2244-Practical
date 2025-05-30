@@ -1,0 +1,98 @@
+// Communication between two or more processes - Inter Process Communication(IPC)
+
+// 01. Shared memory --> Syncronization
+// 02. Message passing --> Asyncronization
+
+
+/* 
+
+Shared Memory – Processes access a common memory space for faster communication, but synchronization is required to avoid conflicts.
+
+Message Passing – Processes send messages to each other via the operating system, making communication structured and safe.
+
+*/
+
+// sender
+
+vi shared1.c
+
+#include <stdio.h> // Standard input/output functions
+#include <sys/ipc.h> // Header for IPC (Inter-Process Communication) key generation
+#include <sys/msg.h> // Header for message queue functions
+#define MAX 10 // Define a constant MAX as 10 for limiting user input size
+
+//Structure for message queue
+struct mesg_buffer{
+	long mesg_type; // Message type (must be a positive number; required by message queues)
+	char mesg_text[100]; // Buffer to store message text (up to 100 characters)
+}
+message; // Create a global variable
+int main()
+{
+	key_t key; // Variable to store IPC key
+	int msgid; // Variable to store message queue identifier (ID)
+	
+	//ftok to generate unique key
+	key = ftok("progfile",65);
+	
+	// msgget creates a message queue
+	// and returns idetifier
+	msgid = msgget(key, 0666 | IPC_CREAT);
+	message.mesg_type = 1;
+	printf("Write Data: ");
+	fgets(message.mesg_text,MAX,stdin);
+	
+	// msgsnd to send message
+	msgsnd(msgid, &message, sizeof(message), 0);
+	
+	// display the message
+	printf("Data send is : %s \n", message.mesg_text);
+	
+	return 0;
+}
+
+gcc shared1.c -o shared1
+./shared1
+
+vi shared2.c
+
+.............................................................................................................................................
+
+// receiver
+
+#include <stdio.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+
+// structure for message queue
+struct mesg_buffer{
+	long mesg_type;
+	char mesg_text[100];
+}
+message;
+int main()
+{
+	key_t key;
+	int msgid;
+	
+	//ftok to generate unique key
+	key = ftok("progfile",65);
+	
+	// msgget creates a message queue
+	// and returns idetifier
+	msgid = msgget(key, 0666 | IPC_CREAT);
+	
+	//msgrcv to recieve message
+	msgrcv(msgid, &message, sizeof(message), 1, 0);
+	
+	// display the message
+	printf("Data Recieved is : %s \n", message.mesg_text);
+	
+	// to destroy the message queue
+	msgctl(msgid, IPC_RMID, NULL);
+	
+	return 0;
+}
+
+gcc shared2.c -o shared2
+./shared2
