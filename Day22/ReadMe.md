@@ -1,52 +1,8 @@
-# Batch Scripts Collection
+## Code 01
 
-This repository contains three batch script files designed for different purposes, including directory creation, system information display, and time/date retrieval.
+![1](https://github.com/user-attachments/assets/4d493619-0332-4eaa-94cf-ba10abce2bcb)
 
-## Included Batch Files
 
-### 1. `Pro1.bat` - Directory Structure Creator
-This script creates a hierarchical folder structure with multiple criteria and standard folders.
+## Code 02
 
-**Functionality:**
-- Creates six main folders (`Critieria_1` to `Critieria_6`).
-- Each main folder contains subdirectories named `Standar_1`, `Standar_2`, etc.
-- Helps organize files systematically.
-
-**Usage:**
-1. Double-click `Pro1.bat` or run it in the Command Prompt.
-2. The specified folders will be created automatically.
-
----
-
-### 2. `Pro2.bat` - System Information Display
-This script displays basic system information, including:
-- The currently logged-in username.
-- The Windows version.
-
-**Usage:**
-1. Run `Pro2.bat` in the Command Prompt.
-2. The username and Windows version will be displayed.
-
----
-
-### 3. `Pro3.bat` - Date and Time Display
-This script outputs the current system date and time.
-
-**Usage:**
-1. Run `Pro3.bat` in the Command Prompt.
-2. The date and time will be displayed.
-3. Press any key to exit.
-
----
-
-## How to Use
-1. Download the batch files.
-2. Place them in the desired directory.
-3. Double-click or run them via Command Prompt (`cmd`).
-4. Follow on-screen prompts if applicable.
-
----
-
-**Author:** punya2001-pk  
-**Repository:** 
-
+![2](https://github.com/user-attachments/assets/9c19fd2f-9e31-474a-977e-f1d1a5bcdf83)
